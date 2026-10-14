@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -12,6 +16,8 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                sh 'node --version'
+                sh 'npm --version'
                 sh 'npm ci'
             }
         }

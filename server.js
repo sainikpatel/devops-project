@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.send(`
     <h1>DevOps CI/CD Project</h1>
     <p>Node.js application deployed using Jenkins!</p>
-    <h1>Devops CI/CD </h1>
+    <h1>batch -2 </h1>
   `);
 });
 
